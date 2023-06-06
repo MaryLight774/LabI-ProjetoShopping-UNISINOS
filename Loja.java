@@ -103,29 +103,34 @@ public class Loja{
     }
     
     public void imprimeProdutos(){
-        int i;
-        for (i=0; i<estoqueProdutos.length; i++){
-            System.out.println(this.estoqueProdutos[i].toString());
+        int i = 0;
+        if (this.estoqueProdutos[i] != null){
+            for (i=0; i<this.estoqueProdutos.length; i++){
+                System.out.println(this.estoqueProdutos[i].toString());
+            }    
         }
+        
     }
     
     public boolean insereProduto(Produto produto){
-        int i;
-        for (i=0; i<estoqueProdutos.length; i++){
-            if (this.estoqueProdutos[i] == null){
-                this.estoqueProdutos[i] = produto;
-                return true;
+        if (estoqueProdutos.length == 0){
+            return false;
+        } else{
+            for (int i=0; i<estoqueProdutos.length; i++){
+                if (this.estoqueProdutos[i] == null){
+                    this.estoqueProdutos[i] = produto;
+                    return true;
+                }
             }
+            return false;
         }
         
-        return false;
     }
     
     public boolean removeProduto(String nome_produto){
-        int i;
-        for (i=0; i<estoqueProdutos.length; i++){
-            if (this.estoqueProdutos[i].getNome() != null && this.estoqueProdutos[i].getNome().equalsIgnoreCase(nome_produto)){
-                this.estoqueProdutos[i] = null;
+        for (int i = 0; i < estoqueProdutos.length; i++) {
+            if (estoqueProdutos[i] != null && estoqueProdutos[i].getNome().equalsIgnoreCase(nome_produto)) {
+                estoqueProdutos[i] = null;
                 return true;
             }
         }
