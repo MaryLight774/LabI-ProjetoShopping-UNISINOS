@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Shopping
+comment1.params=nome\ endereco\ qtdeMaxLojas
+comment1.target=Shopping(java.lang.String,\ Endereco,\ int)
+comment10.params=
+comment10.target=Informatica\ lojaSeguroMaisCaro()
+comment2.params=
+comment2.target=java.lang.String\ getNome()
+comment3.params=nome
+comment3.target=void\ setNome(java.lang.String)
+comment4.params=
+comment4.target=Endereco\ getEndereco()
+comment5.params=endereco
+comment5.target=void\ setEndereco(Endereco)
+comment6.params=
+comment6.target=Loja[]\ getLojas()
+comment7.params=loja
+comment7.target=boolean\ insereLoja(Loja)
+comment8.params=nome
+comment8.target=boolean\ removeLoja(java.lang.String)
+comment9.params=tipoLoja
+comment9.target=int\ quantidadeLojasPorTipo(java.lang.String)
+numComments=11
